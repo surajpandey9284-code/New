@@ -52,5 +52,5 @@ window.addEventListener('scroll',()=>{$('#topbar').classList.toggle('scrolled',s
 $('#resumeBtn').addEventListener('click',()=>{$('#resumeSheet').classList.add('open');$('#resumeSheet').setAttribute('aria-hidden','false')});$('#closeResume').addEventListener('click',()=>{$('#resumeSheet').classList.remove('open');$('#resumeSheet').setAttribute('aria-hidden','true')});$('#printResume').addEventListener('click',()=>window.print());
 window.addEventListener('mousemove',e=>{const g=$('#cursorGlow');if(g){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'}});
 fetch('/api/track',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({page:location.pathname||'/'})}).catch(()=>{});
-fetch('/api/admin/session').then(r=>r.json()).then(d=>{if(d.isAdmin){const b=$('#loginBtn');b.textContent='Admin Panel';b.onclick=()=>location.href='/admin.html'}}).catch(()=>{});
+fetch('/api/admin/session').then(r=>r.json()).then(d=>{if(d.isAdmin){const old=$('#loginBtn'),b=old.cloneNode(true);old.replaceWith(b);b.textContent='Admin Panel';b.addEventListener('click',()=>location.href='/admin.html')}}).catch(()=>{});
 loadData();

@@ -67,8 +67,8 @@ For local development, create `.env` in the project root with:
 PORT=10000
 NODE_ENV=development
 SESSION_SECRET=change-this-to-a-long-random-string
-ADMIN_USER=Suraj
-ADMIN_PASS=6393
+ADMIN_USER=choose-a-username
+ADMIN_PASS=choose-a-strong-password
 ```
 
 Then restart the Node server after changing `.env`.
