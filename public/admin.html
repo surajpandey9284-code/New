@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Suraj Pandey Portfolio</title>
+<link rel="stylesheet" href="/css/style.css">
+<style>
+  .admin-wrap { padding: 32px 0 80px; }
+  .admin-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:28px; flex-wrap:wrap; gap:12px; }
+  .tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:24px; }
+  .tab-btn {
+    font-family: var(--font-mono); font-size:12.5px; padding:9px 14px; border-radius:8px;
+    border:1px solid var(--border); background:var(--panel); color:var(--muted); cursor:pointer;
+  }
+  .tab-btn.active { color:var(--amber); border-color:var(--amber); }
+  .tab-panel { display:none; }
+  .tab-panel.active { display:block; }
+  .admin-card { background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:22px; margin-bottom:16px; }
+  .admin-card label { display:block; font-family:var(--font-mono); font-size:11.5px; color:var(--muted); margin-bottom:5px; margin-top:12px; }
+  .admin-card label:first-child { margin-top:0; }
+  .admin-card input, .admin-card textarea {
+    width:100%; background:var(--panel-2); border:1px solid var(--border); border-radius:7px;
+    padding:9px 11px; color:var(--text); font-family:var(--font-body); font-size:13.5px;
+  }
+  .admin-card textarea { min-height:70px; resize:vertical; }
+  .row-actions { display:flex; justify-content:flex-end; margin-top:10px; }
+  .remove-btn { background:none; border:1px solid #4a2a28; color:#e2665a; font-size:12px; padding:6px 10px; border-radius:6px; cursor:pointer; }
+  .add-btn { background:none; border:1px dashed var(--border); color:var(--muted); font-size:13px; padding:10px; border-radius:8px; cursor:pointer; width:100%; margin-top:8px; }
+  .add-btn:hover { border-color:var(--amber); color:var(--amber); }
+  .save-bar { position:sticky; bottom:0; background:rgba(11,15,23,0.92); backdrop-filter:blur(10px); border-top:1px solid var(--border); padding:14px 0; margin-top:24px; display:flex; justify-content:space-between; align-items:center; }
+  .save-status { font-family:var(--font-mono); font-size:12.5px; color:var(--muted); }
+  .msg-item { border-bottom:1px solid var(--border); padding:14px 0; }
+  .msg-item:last-child { border-bottom:none; }
+  .msg-top { display:flex; justify-content:space-between; font-size:13px; margin-bottom:6px; }
+  .msg-top strong { font-family:var(--font-display); }
+  .msg-time { font-family:var(--font-mono); font-size:11px; color:var(--muted); }
+  .msg-body { color:var(--muted); font-size:14px; }
+  .gate { text-align:center; padding:120px 20px; }
+  .checklist-item { display:flex; gap:12px; padding:14px 0; border-bottom:1px solid var(--border); }
+  .checklist-item:last-child { border-bottom:none; }
+  .checklist-item input[type=checkbox] { margin-top:3px; width:16px; height:16px; accent-color: var(--amber); }
+  .checklist-label { font-family:var(--font-display); font-weight:600; font-size:14.5px; }
+  .checklist-label.done { color: var(--green); }
+  .checklist-note { color:var(--muted); font-size:13px; margin-top:4px; }
+  .mgmt-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-bottom:16px; }
+  .mgmt-stat { background:var(--panel-2); border:1px solid var(--border); border-radius:9px; padding:16px; }
+  .mgmt-stat .val { font-family:var(--font-mono); font-size:24px; color:var(--amber); font-weight:600; }
+  .mgmt-stat .lbl { font-size:12px; color:var(--muted); margin-top:4px; }
+  .section-label { font-family:var(--font-mono); color:var(--amber); font-size:12px; margin-bottom:8px; text-transform:uppercase; letter-spacing:.06em; }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a href="/" class="brand"><span class="dot"></span> SURAJ ADMIN</a>
+    <div style="display:flex; gap:10px; align-items:center;">
+      <a href="/" class="admin-btn" style="text-decoration:none;">View site</a>
+      <button class="admin-btn" id="logoutBtn">Log out</button>
+    </div>
+  </div>
+</header>
+
+<div id="gate" class="gate" style="display:none;">
+  <h2 style="font-family:var(--font-display);">Checking session…</h2>
+  <p style="color:var(--muted);">If you're not redirected, <a href="/" style="color:var(--amber);">log in from the homepage</a>.</p>
+</div>
+
+<div id="adminApp" class="container admin-wrap" style="display:none;">
+  <div class="admin-head">
+    <div>
+      <div class="eyebrow">// Admin panel</div>
+      <h2 style="font-family:var(--font-display); margin:0;">Manage portfolio content</h2>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab-btn active" data-tab="profile">Profile</button>
+    <button class="tab-btn" data-tab="experience">Experience</button>
+    <button class="tab-btn" data-tab="projects">Projects</button>
+    <button class="tab-btn" data-tab="skills">Skills</button>
+    <button class="tab-btn" data-tab="education">Education</button>
+    <button class="tab-btn" data-tab="messages">Messages</button>
+    <button class="tab-btn" data-tab="management">Management</button>
+  </div>
+
+  <div class="tab-panel active" id="tab-profile"></div>
+  <div class="tab-panel" id="tab-experience"></div>
+  <div class="tab-panel" id="tab-projects"></div>
+  <div class="tab-panel" id="tab-skills"></div>
+  <div class="tab-panel" id="tab-education"></div>
+  <div class="tab-panel" id="tab-messages"></div>
+  <div class="tab-panel" id="tab-management"></div>
+
+  <div class="save-bar">
+    <span class="save-status" id="saveStatus">All changes saved</span>
+    <button class="btn btn-primary" id="saveBtn">Save all changes</button>
+  </div>
+</div>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>

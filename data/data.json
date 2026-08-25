@@ -1,0 +1,174 @@
+{
+  "profile": {
+    "name": "Suraj Pandey",
+    "title": "Data Analyst | Business Analytics & BI",
+    "tagline": "Turning finance, sales and data into decisions leadership can act on.",
+    "bio": "MBA (Finance & IT) candidate at Dr. A.P.J. Abdul Kalam Technical University with hands-on expertise in data analysis, business analytics, and business intelligence, alongside direct B2B sales and marketplace management experience. Proficient in Power BI, Advanced Excel, SQL, and Python, with project experience building interactive dashboards, automating KPI reporting, and conducting data-driven financial analysis.",
+    "location": "Rajajipuram, Lucknow, U.P.",
+    "phone": "+91-6393529284",
+    "email": "surajpandey9284@gmail.com",
+    "linkedin": "https://linkedin.com/in/suraj-pandey6a19793b3",
+    "social": {
+      "whatsapp": "916393529284",
+      "instagram": "https://instagram.com/_krishna_pandit",
+      "linkedin": "https://linkedin.com/in/suraj-pandey6a19793b3",
+      "github": "https://github.com/surajpandey9284-code/surajpandeyportfolio"
+    },
+    "stats": [
+      {
+        "value": "15+",
+        "label": "KPIs analyzed in dashboard work"
+      },
+      {
+        "value": "30%",
+        "label": "Manual reporting time reduced"
+      },
+      {
+        "value": "3+ yrs",
+        "label": "Historical data analyzed"
+      },
+      {
+        "value": "20+",
+        "label": "Automated visual reports"
+      }
+    ]
+  },
+  "experience": [
+    {
+      "id": "exp1",
+      "role": "B2B Sales Manager",
+      "org": "Singh Enterprises",
+      "period": "July 2026 – Present",
+      "points": [
+        "Managing B2B sales operations for a chemicals and cleaning products portfolio (battery water, caustic soda flakes, glass cleaner) under the self-created brand \"EZ Shine\".",
+        "Drive marketplace expansion across IndiaMART, TradeIndia, and Flipkart Seller Hub, handling category listings, quality-check compliance, and SLA management.",
+        "Own SEO-optimized product listings and pricing for 10+ SKUs, plus a 12-page product catalogue, across B2C and B2B channels.",
+        "Coordinate with buyers on bulk/B2B orders, negotiate terms, and maintain client relationships to grow repeat business."
+      ]
+    },
+    {
+      "id": "exp2",
+      "role": "Trainee Territory Business Manager",
+      "org": "Indoco Remedies Limited",
+      "period": "2024 · Less than 6 months",
+      "points": [
+        "Tracked and analyzed territory performance metrics, compiling data into regular reports for senior management.",
+        "Used field data trends to identify engagement opportunities and support decision-making with healthcare stakeholders.",
+        "Maintained structured records to monitor targets and performance consistency."
+      ]
+    },
+    {
+      "id": "exp3",
+      "role": "Accounts & Finance Trainee",
+      "org": "Chit Fund Private Limited",
+      "period": "2024 · 6 months",
+      "points": [
+        "Maintained and analyzed daily financial records and ledger data for chit fund operations.",
+        "Tracked member contribution and payout data, reconciling accounts on a monthly basis.",
+        "Compiled financial summaries to support audit and compliance reporting."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj1",
+      "title": "Business Analytics — Power BI Dashboard",
+      "description": "Built an interactive Power BI dashboard analyzing 15+ KPIs across revenue, expenses, and profitability, cutting manual reporting time by ~30%. Engineered DAX measures for dynamic KPI tracking and automated monthly reporting workflows. Conducted data-driven budgeting and variance analysis, identifying cost-saving opportunities worth an estimated 12% efficiency gain.",
+      "tags": [
+        "Power BI",
+        "DAX",
+        "Budgeting",
+        "Variance Analysis"
+      ],
+      "link": ""
+    },
+    {
+      "id": "proj2",
+      "title": "Stock Market Data Analysis (Python)",
+      "description": "Analyzed 3+ years of historical stock data across 10 equities using Pandas and Matplotlib to identify trend patterns. Performed risk and performance analysis (volatility, Sharpe ratio) to support data-backed investment decisions. Generated 20+ automated visual reports condensing multi-year datasets into clear business insights.",
+      "tags": [
+        "Python",
+        "Pandas",
+        "Matplotlib",
+        "Risk Analysis"
+      ],
+      "link": ""
+    }
+  ],
+  "skills": {
+    "Finance": [
+      "Financial Analysis",
+      "Financial Modeling",
+      "Budgeting & Forecasting",
+      "Ratio Analysis",
+      "Variance Analysis",
+      "KPI Reporting"
+    ],
+    "Technical": [
+      "Power BI (DAX)",
+      "Advanced Excel",
+      "SQL",
+      "Python (Pandas, NumPy, Matplotlib)",
+      "Data Visualization",
+      "MCP"
+    ],
+    "Sales & Business": [
+      "B2B Sales",
+      "Marketplace Management (IndiaMART, TradeIndia, Flipkart)",
+      "Client Relationship Management"
+    ],
+    "Languages": [
+      "Hindi (Fluent)",
+      "English (Fluent)"
+    ]
+  },
+  "education": [
+    {
+      "degree": "Master of Business Administration (MBA) — Finance & IT",
+      "school": "Dr. A.P.J. Abdul Kalam Technical University",
+      "period": "2024 – 2026"
+    },
+    {
+      "degree": "Bachelor of Science (B.Sc) — Mathematics & Computer Science",
+      "school": "Chhatrapati Shahu Ji Maharaj University",
+      "period": "2021 – 2024 · First Division"
+    }
+  ],
+  "certifications": [
+    "IBM Data Science Professional Certificate — IBM / Coursera",
+    "Introduction to Model Context Protocol (MCP) — Anthropic",
+    "ADCA — Advanced Diploma in Computer Applications"
+  ],
+  "launchChecklist": [
+    {
+      "id": "og-image",
+      "label": "Add a social preview image",
+      "note": "Done — generated and wired up as /images/social-preview.png (shows when you share your link on WhatsApp, LinkedIn, etc.)",
+      "done": true
+    },
+    {
+      "id": "subdomain",
+      "label": "Host app on a subdomain",
+      "note": "Do this in Render: Settings → Custom Domain → add e.g. suraj.yourdomain.com, then point a CNAME record at your DNS provider to the Render URL.",
+      "done": false
+    },
+    {
+      "id": "onboarding",
+      "label": "Add an onboarding checklist",
+      "note": "This list — visible only to you here in Admin → Management.",
+      "done": true
+    },
+    {
+      "id": "analytics",
+      "label": "Add product analytics",
+      "note": "Done — built-in visit tracking, see Admin → Management → Analytics.",
+      "done": true
+    },
+    {
+      "id": "sitemap",
+      "label": "Add a sitemap.xml",
+      "note": "Done — live at /sitemap.xml for search engines.",
+      "done": true
+    }
+  ]
+}
